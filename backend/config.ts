@@ -1,2 +1,2 @@
-export const ACCESS_TOKEN = "uFspefnkpJMEWNcUKlBZ5Z7dRP5J2J1eKxX-RwtSFRg";
-export const SPACE_ID = "kj2vp8ew4vd4";
+export const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+export const SPACE_ID = process.env.SPACE_ID;
