@@ -12,7 +12,7 @@ const todosSlice = createSlice({
             })
         },
         todosToggled(state, action) {
-            const todo = state.find((todo: any) => todo.id === action.payload.id);
+            const todo = state.find((todo: any) => todo.id === action.payload.id) || {completed: false};
             todo.completed = !todo.completed
         }
     }
