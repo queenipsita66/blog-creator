@@ -1,10 +1,10 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import '@fontsource/Ubuntu/300.css';
-import '@fontsource/Ubuntu/400.css';
-import '@fontsource/Ubuntu/500.css';
-import '@fontsource/Ubuntu/700.css';
+import '@fontsource/ubuntu/300.css';
+import '@fontsource/ubuntu/400.css';
+import '@fontsource/ubuntu/500.css';
+import '@fontsource/ubuntu/700.css';
 import { Provider } from 'react-redux';
 import { store, wrapper } from '../store/store';
 
