@@ -16,17 +16,17 @@ const SignInPage = (props: any) => {
             email: data.get('email')?.toString(),
             password: data.get('password')?.toString(),
         }
-        const res = await fetch('/api/login', {
-            method: "POST",
-            body: JSON.stringify(body),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        const resNew = res.json();
-        if(resNew?.status_code == "200") {
-            router.push("/dashboard");
-        }
+        // const res = await fetch('/api/login', {
+        //     method: "POST",
+        //     body: JSON.stringify(body),
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     }
+        // });
+        // const resNew = res.json();
+        // if(resNew?.status_code == "200") {
+        //     router.push("/dashboard");
+        // }
     };
 
     return (

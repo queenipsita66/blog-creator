@@ -5,31 +5,30 @@ import { withSessionSsr } from "../../lib/withSession";
 
 export const getServerSideProps = withSessionSsr(
     async function getServerSideProps({ req }) {
-        console.log("coming in getServerSideProps");
-        const user = req.session?.user;
-        console.log("user - ", user);
+        // console.log("coming in getServerSideProps");
+        // const user = req.session?.user;
+        // console.log("user - ", user);
 
-        if (user && user?.email) {
-            const dashboardData = await getDashboardPageCollection();
-            return {
-                props: {
-                    authenticated: true,
-                    dashboardData: dashboardData
-                },
-            };
-        }
-
+        // if (user && user?.email) {
+        //     const dashboardData = await getDashboardPageCollection();
+        //     return {
+        //         props: {
+        //             authenticated: true,
+        //             dashboardData: dashboardData
+        //         },
+        //     };
+        // }
+        const dashboardData = await getDashboardPageCollection();
         return {
             props: {
-                authenticated: false,
-                dashboardData: []
+                authenticated: true,
+                dashboardData: dashboardData
             },
         };
     },
 );
 
 const Dashboard = (props: any) => {
-    console.log("authenticated - ", props.authenticated)
     if (props.authenticated) {
         return <DashboardPage {...props} />
     } else {
